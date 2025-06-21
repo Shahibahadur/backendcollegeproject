@@ -33,4 +33,16 @@ public class User {
 
     @Column(nullable = false)
     private String address;
+
+    // Stores the API path for the user's profile image
+    @Column(name = "profile_picture")
+    private String profilePicture;
+
+    public String getProfilePicture() {
+        return profilePicture;
+    }
+
+    public void setProfilePicture(String profilePicture) {
+        this.profilePicture = profilePicture;
+    }
 } 

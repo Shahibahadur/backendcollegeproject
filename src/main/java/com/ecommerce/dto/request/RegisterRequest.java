@@ -7,23 +7,23 @@ import lombok.Data;
 
 @Data
 public class RegisterRequest {
-    @NotBlank
-    @Size(min = 3, max = 50)
-    private String name;
-
-    @NotBlank
-    @Email
-    private String email;
-
-    @NotBlank
-    @Size(min = 6, max = 100)
-    private String password;
-
-    @NotBlank
-    @Size(min = 10, max = 15)
-    private String phone;
-
-    @NotBlank
-    @Size(max = 200)
-    private String address;
+    public org.springframework.web.multipart.MultipartFile profilePicture;
+    
+    @NotBlank(message = "Name is required")
+    @Size(min = 2, max = 50, message = "Name must be between 2 and 50 characters")
+    public String name;
+    
+    @NotBlank(message = "Email is required")
+    @Email(message = "Email should be valid")
+    public String email;
+    
+    @NotBlank(message = "Password is required")
+    @Size(min = 6, message = "Password must be at least 6 characters")
+    public String password;
+    
+    @NotBlank(message = "Phone is required")
+    public String phone;
+    
+    @NotBlank(message = "Address is required")
+    public String address;
 } 

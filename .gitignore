@@ -31,3 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+# Ignore sensitive application configuration like database passwords
+ecommerce/src/main/resources/application.properties
+
+# Ignore user-uploaded profile pictures
+ecommerce/uploads/images/profile-pictures/
+
